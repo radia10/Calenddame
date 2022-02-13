@@ -5,7 +5,7 @@
 	display: flex;
 	justify-content: flex-start;
 	flex-direction: column;
-	align-items: center;
+	align-items: left;
     margin-top: 60%;
 	font-weight: 500;
 	background-color: rgb(248, 241, 198);
@@ -14,4 +14,5 @@
 
 .lmj-footer-elem {
 	margin-bottom: 10px;
+    text-align: left;
 }
