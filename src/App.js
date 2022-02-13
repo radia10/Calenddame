@@ -1,24 +1,51 @@
-import logo from './logo.svg';
 import './App.css';
+import './styles/app.scss';
+
+import {BrowserRouter, Route,Switch} from "react-router-dom";
+import Etudiant from './composants/Etudiant.jsx';
+import Enseignant from './composants/Enseignant.jsx';
+import Admin from './composants/Admin.jsx';
+import Navigation from './composants/Navigation.jsx';
+import Header from './composants/Header';
+
+import Footer from './composants/Footer';
+
+
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <BrowserRouter>
+    
+
+   <Header title={'Bienvenue sur le portail d\'authentification'}/>
+  <Navigation/>
+  <Switch>
+
+      <Route path='/Etudiant.jsx'>
+         <Etudiant/>
+      </Route>
+    
+    <Route path='/Enseignant.jsx'>
+        <Enseignant/>
+    </Route>
+
+    <Route path='/Admin.jsx'>
+        <Admin/>
+    </Route>
+  
+    
+  
+    </Switch>
+   
+
+    </BrowserRouter>
+    <Footer/>
     </div>
+    
+
+    
   );
 }
 
