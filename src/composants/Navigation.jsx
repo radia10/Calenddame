@@ -16,7 +16,7 @@ function Navigation() {
     <NavLink to="/Etudiant.jsx">
     <Card>
     <img src={ic1} alt='Logo_calen' className='ic1' />
-    <p>Etudiant</p>
+    <p className='bt'>Etudiant</p>
     </Card>
     </NavLink>
       </div>
@@ -26,7 +26,7 @@ function Navigation() {
       <NavLink to="/Enseignat.jsx">
         <Card>
       <img src={ic2} alt='Logo_calen' className='ic2' />
-      <p>Enseignant</p>
+      <p className='bt'>Enseignant</p>
         </Card>
       </NavLink>
       </div>
@@ -35,7 +35,7 @@ function Navigation() {
       <NavLink to="/Admin.jsx">
         <Card>
         <img src={ic3} alt='Logo_calen' className='ic3' />
-      <p>Admin</p>
+        <p className='bt'>Admin</p>
         </Card>
       </NavLink>
       </div>    
