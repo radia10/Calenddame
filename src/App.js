@@ -19,8 +19,8 @@ function App() {
     <BrowserRouter>
     
 
-   <Header title={'Bienvenue sur le portail d\'authentification'}/>
-  <Navigation/>
+  <Header title={'Bienvenue sur le portail d\'authentification'}/>
+  <Navigation>
   <Switch>
 
       <Route path='/Etudiant.jsx'>
@@ -35,13 +35,11 @@ function App() {
         <Admin/>
     </Route>
   
-    
-  
     </Switch>
-   
-
-    </BrowserRouter>
-    <Footer/>
+    </Navigation>
+  </BrowserRouter>
+    
+  <Footer/>
     </div>
     
 
