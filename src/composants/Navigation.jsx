@@ -8,12 +8,17 @@ import Card from './Card.jsx';
 import '../styles/app.scss';
 
 
-function Navigation() {
+function Navigation({text}) {
+    
+ //const history=useHistory();   
+
   return (
     
     <div className='Navigation'>
+        
+
         <div className='et'>
-    <NavLink to="/Etudiant.jsx">
+    <NavLink  activeStyle={{fontWeight: "bold"}} className={'na'}  to="/Etudiant">
     <Card>
     <img src={ic1} alt='Logo_calen' className='ic1' />
     <p className='bt'>Etudiant</p>
@@ -23,16 +28,17 @@ function Navigation() {
 
       <div className='ens'>
     
-      <NavLink to="/Enseignat.jsx">
+      <NavLink activeStyle={{fontWeight: "bold"}} className={'na'}  to="/Enseignant">
         <Card>
       <img src={ic2} alt='Logo_calen' className='ic2' />
       <p className='bt'>Enseignant</p>
+
         </Card>
       </NavLink>
       </div>
 
       <div className='adm'>
-      <NavLink to="/Admin.jsx">
+      <NavLink activeStyle={{fontWeight: "bold"}} className={'na'} to="/Admin">
         <Card>
         <img src={ic3} alt='Logo_calen' className='ic3' />
         <p className='bt'>Admin</p>
