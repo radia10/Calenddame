@@ -1,7 +1,7 @@
 import './App.css';
 import './styles/app.scss';
 
-import {BrowserRouter, Redirect,Route,Switch} from "react-router-dom";
+import {BrowserRouter,Route,Switch} from "react-router-dom";
 import Etudiant from './composants/Etudiant.jsx';
 import Enseignant from './composants/Enseignant.jsx';
 import Admin from './composants/Admin.jsx';
@@ -19,37 +19,29 @@ function App() {
 
   return (
     <div className="App">
+      
     <BrowserRouter>
     
 
   <Header title={'Bienvenue sur le portail d\'authentification'}/>
+  
   <Navigation/>
   <Switch>
   
-      <Route exact path='/Etudiant'  component={Etudiant}/>
-      <Route exact path='/Enseignant' component={Enseignant}/>
-      <Route exact path='/Admin' component={Admin}/>
-      
-      
-        
-      
-    
-    <Redirect path='/Enseignant'/>
-        
-   
+      <Route  path='/Etudiant'  exact component={Etudiant}/>
+      <Route  path='/Enseignant'  exact component={Enseignant}/>
+      <Route  path='/Admin' exact component={Admin}/>
 
-    <Redirect path='/Admin'/>
-       
-    
-   
     </Switch>
-  
-    
-    <Footer/>
-   
-  </BrowserRouter>
- 
+    <div className='minsite'>
+      
     </div>
+    
+  </BrowserRouter>
+  <Footer/>
+  </div>
+ 
+ 
     
 
     
